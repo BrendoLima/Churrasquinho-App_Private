@@ -12,14 +12,13 @@ export default function Routes() {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        style: {
-          backgroundColor: "#E26C21",
-          borderTopColor: "transparent",
-        },
-        activeTintColor: "#9A3731",
+        activeTintColor: "#000",
+        inactiveTintColor: "#FFF",
         tabStyle: {
-          paddingBottom: 5,
-          paddingTop: 5,
+          width: "auto",
+          borderTopColor: "transparent",
+          backgroundColor: "#E26C21",
+          padding: 5,
         },
       }}
     >

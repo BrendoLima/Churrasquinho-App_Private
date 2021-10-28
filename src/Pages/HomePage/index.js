@@ -4,7 +4,7 @@ import React from "react";
 export default function HomePage() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Você está na tela HomePage</Text>
+      <Text style={styles.text}>Você está na HomePage</Text>
     </View>
   );
 }

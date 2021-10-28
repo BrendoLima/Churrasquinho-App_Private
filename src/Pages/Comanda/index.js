@@ -5,7 +5,7 @@ import styleGlobal from "../stylesGlobal";
 export default function Comand() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Você está na tela Comand</Text>
+      <Text style={styles.text}>Você está na tela de Comanda</Text>
     </View>
   );
 }

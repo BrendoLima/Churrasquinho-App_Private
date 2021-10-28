@@ -4,6 +4,7 @@
     expo install react-native-screens react-native-safe-area-context
     expo install @react-navigation/bottom-tabs
     pm i @expo/vector-icons
+    "firebase": "^8.0.0",
 
 //Message Commit Pattern
 data.hour.commit order of the day

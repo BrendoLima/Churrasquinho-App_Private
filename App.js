@@ -6,6 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <TouchableHighlight
+        style={styles.touch}
         activeOpacity={0.6}
         underlayColor="#ABCDEF"
         onPress={() => {}}
@@ -23,5 +24,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  touch: {
+    padding: 5,
   },
 });

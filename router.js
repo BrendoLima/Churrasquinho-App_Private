@@ -1,14 +1,13 @@
 import React from "react";
-//import { Entypo, Feather } from "@expo/vector-icons";
-//import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 //  Pages
-//import Comanda from "./Pages/Comanda";
-//import Homepage from "./Pages/HomePage";
-//import Payment from "./Pages/Payment";
+import Cardapio from "./Pages/Cardapio";
+import Comanda from "./Pages/Comanda";
+import Pagamento from "./Pages/Pagamento";
 
 const Tab = createBottomTabNavigator();
-export default function Routes() {
+export default function Router() {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -23,13 +22,30 @@ export default function Routes() {
             backgroundColor: "#E26C21",
             display: "flex",
           },
-          null,
         ],
       }}
     >
-      <Tab.Screen name="Cardápio" component={Homepage} />
-      <Tab.Screen name="Minha Comanda" component={Comanda} />
-      <Tab.Screen name="Pagamento" component={Payment} />
+      <Tab.Screen
+        name="Cardápio"
+        component={Cardapio}
+        options={{
+          tabBarIcon: ({ size, color }) => <h1>+</h1>,
+        }}
+      />
+      <Tab.Screen
+        name="Comanda"
+        component={Comanda}
+        options={{
+          tabBarIcon: ({ size, color }) => <h1>+</h1>,
+        }}
+      />
+      <Tab.Screen
+        name="Pagamento"
+        component={Pagamento}
+        options={{
+          tabBarIcon: ({ size, color }) => <h1>+</h1>,
+        }}
+      />
     </Tab.Navigator>
   );
 }

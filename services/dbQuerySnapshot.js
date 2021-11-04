@@ -17,6 +17,6 @@ export default function dbQuerySnapshot() {
       });
       setProdutos(produtos);
     });
-  }, []);
+  }, [produtos]);
   return produtos;
 }

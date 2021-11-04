@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, Alert, Pressable, View } from "react-native";
+import { Button, StyleSheet, Text, Alert, View } from "react-native";
 
 import { ScrollView } from "react-native-gesture-handler";
 import SafeAreaView from "react-native-safe-area-context";
@@ -7,29 +7,45 @@ import SafeAreaView from "react-native-safe-area-context";
 import dbQuerySnapshot from "./services/dbQuerySnapshot";
 
 export default function App() {
-  return (
-    /*<SafeAreaView>*/
-    <ScrollView style={styles.container}>
-      <View style={styles.list}>
-        {dbQuerySnapshot().map((produtos) => {
-          return (
-            <View
-              style={styles.card}
-              key={produtos.id}
-              onPress={() => Alert.alert("Modal has been closed.")}
-            >
-              <View style={styles.text}>
-                <Text>{produtos.name}</Text>
-                <Text>{"R$ " + produtos.value + ",00"}</Text>
-              </View>
-            </View>
-          );
-        })}
-        <Text style={styles.textcss}>ok</Text>
-      </View>
-    </ScrollView>
+  const showAlert = () =>
+    Alert.alert(
+      "Alert Title",
+      "My Alert Msg",
+      [
+        {
+          text: "Cancel",
+          onPress: () => Alert.alert("Cancel Pressed"),
+          style: "cancel",
+        },
+      ],
+      {
+        cancelable: true,
+        onDismiss: () =>
+          Alert.alert(
+            "This alert was dismissed by tapping outside of the alert dialog."
+          ),
+      }
+    );
 
-    /*</SafeAreaView>*/
+  return (
+    <SafeAreaView>
+      <ScrollView style={styles.container}>
+        <View style={styles.list}>
+          {dbQuerySnapshot().map((produtos) => {
+            return (
+              <View style={styles.card} key={produtos.id}>
+                <View style={styles.text}>
+                  <Text>{produtos.name}</Text>
+                  <Text>{"R$ " + produtos.value + ",00"}</Text>
+                </View>
+                <Button title="Show alert" onPress={showAlert} />
+              </View>
+            );
+          })}
+          {/*<View style={styles.textcss}>ok</View>*/}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -38,26 +54,33 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   list: {
-    justifyContent: "space-between",
+    justifyContent: "center",
     flexDirection: "row",
     flexWrap: "wrap",
-    marginHorizontal: 10,
   },
   card: {
-    maxHeight: "30%",
-    backgroundColor: "#1212",
+    margin: 3,
+    padding: 10,
+    minHeight: 75,
     textAlign: "center",
-    justifyContent: "center",
+    alignItems: "center",
+    justifyContent: "space-between",
 
-    marginVertical: 10,
+    backgroundColor: "#1212",
   },
   text: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    textAlign: "center",
+    flexDirection: "column",
   },
 
   textcss: {
+    margin: 5,
+    padding: 10,
+    minHeight: 75,
+    minWidth: "30%",
+
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "#F194FF",
   },
 });

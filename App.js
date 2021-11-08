@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, StyleSheet, Text, Alert, View } from "react-native";
+import { Button, StyleSheet, Text, Alert, View, Pressable } from "react-native";
 
 import { ScrollView } from "react-native-gesture-handler";
 import SafeAreaView from "react-native-safe-area-context";
@@ -28,29 +28,29 @@ export default function App() {
     );
 
   return (
-    <SafeAreaView>
-      <ScrollView style={styles.container}>
-        <View style={styles.list}>
-          {dbQuerySnapshot().map((produtos) => {
-            return (
-              <View style={styles.card} key={produtos.id}>
+    <ScrollView style={styles.container}>
+      <View style={styles.list}>
+        {dbQuerySnapshot().map((produtos) => {
+          return (
+            <View style={styles.card} key={produtos.id}>
+              <Pressable onPress={showAlert}>
                 <View style={styles.text}>
                   <Text>{produtos.name}</Text>
                   <Text>{"R$ " + produtos.value + ",00"}</Text>
                 </View>
-                <Button title="Show alert" onPress={showAlert} />
-              </View>
-            );
-          })}
-          {/*<View style={styles.textcss}>ok</View>*/}
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+              </Pressable>
+            </View>
+          );
+        })}
+        {/*<View style={styles.textcss}>ok</View>*/}
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 20,
     flexDirection: "column",
   },
   list: {

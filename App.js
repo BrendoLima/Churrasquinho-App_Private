@@ -32,17 +32,16 @@ export default function App() {
       <View style={styles.list}>
         {dbQuerySnapshot().map((produtos) => {
           return (
-            <View style={styles.card} key={produtos.id}>
-              <Pressable onPress={showAlert}>
-                <View style={styles.text}>
-                  <Text>{produtos.name}</Text>
-                  <Text>{"R$ " + produtos.value + ",00"}</Text>
-                </View>
-              </Pressable>
-            </View>
+            <Pressable onPress={showAlert}>
+              <View style={styles.card} key={produtos.id}>
+                <Text style={styles.text}>{produtos.name}</Text>
+                <Text style={styles.text}>
+                  {"R$ " + produtos.value + ",00"}
+                </Text>
+              </View>
+            </Pressable>
           );
         })}
-        {/*<View style={styles.textcss}>ok</View>*/}
       </View>
     </ScrollView>
   );
@@ -50,7 +49,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    marginTop: 25,
     flexDirection: "column",
   },
   list: {
@@ -59,28 +58,19 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
   },
   card: {
-    margin: 3,
+    borderWidth: 2,
+    borderRadius: 8,
+    margin: 2,
     padding: 10,
-    minHeight: 75,
-    textAlign: "center",
+    width: 110,
+    height: 110,
     alignItems: "center",
-    justifyContent: "space-between",
-
+    justifyContent: "center",
+    borderColor: "#9A3731",
     backgroundColor: "#1212",
   },
   text: {
-    flexDirection: "column",
-  },
-
-  textcss: {
-    margin: 5,
-    padding: 10,
-    minHeight: 75,
-    minWidth: "30%",
-
-    textAlign: "center",
     alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#F194FF",
+    textAlign: "center",
   },
 });

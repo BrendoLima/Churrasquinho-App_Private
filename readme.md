@@ -4,7 +4,7 @@
     npm install @react-navigation/native
     npm install firebase --save
 
-
+.expo/
     "react-native": "^0.66.1",
     "react-native-gesture-handler": "~1.7.0",
     "react-native-reanimated": "~1.13.0",

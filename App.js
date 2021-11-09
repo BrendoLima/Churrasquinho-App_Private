@@ -17,6 +17,11 @@ export default function App() {
           onPress: () => Alert.alert("Cancel Pressed"),
           style: "cancel",
         },
+        {
+          text: "Yes",
+          onPress: () => Alert.alert("Cancel Pressed"),
+          style: "cancel",
+        },
       ],
       {
         cancelable: true,

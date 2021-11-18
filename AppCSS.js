@@ -64,13 +64,16 @@ const stylesNw = StyleSheet.create({
   comandaIcon: {
     backgroundColor: "#FF7090",
     alignSelf: "flex-end",
-    position: "absolute",
+    position: "fixed",
     borderRadius: 100,
     tintColor: "#FFF",
     top: "35rem",
     padding: 15,
     margin: 10,
     zIndex: 1,
+    shadowRadius: 5,
+    shadowOffset: { width: 2, height: 2 },
+    shadowOpacity: 0.25,
   },
 });
 export { stylesNw };

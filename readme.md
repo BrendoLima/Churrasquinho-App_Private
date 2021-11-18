@@ -5,6 +5,10 @@
     npm install firebase --save
 
     .expo/
+<<<<<<< HEAD
+=======
+    expo install @react-native-async-storage/async-storage
+>>>>>>> 525f193b39c5016fc267efd67db4eb6bf411553a
     
     "react-native": "^0.66.1",
     "react-native-gesture-handler": "~1.7.0",

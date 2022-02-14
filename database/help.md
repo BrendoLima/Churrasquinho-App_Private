@@ -1,4 +1,4 @@
-# Instruções e duvidas.
+# Instruções e dúvidas.
 
 ### Esta pasta irá conter o Endereço (Chave de acesso) do seu banco de dados.
 

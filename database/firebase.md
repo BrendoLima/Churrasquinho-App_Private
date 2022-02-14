@@ -1,7 +1,8 @@
 # Esta pasta irá conter o Endereço do seu banco de dados
 
 
-> import firebase from "firebase";
+``` 
+import firebase from "firebase";
 import "firebase/firestore";
 
 var firebaseConfig = {
@@ -22,3 +23,4 @@ export default {
   firebase,
   db,
 };
+```

@@ -1,4 +1,6 @@
-# Esta pasta irá conter o Endereço (Chave de acesso) do seu banco de dados.
+# Instruções e duvidas.
+
+### Esta pasta irá conter o Endereço (Chave de acesso) do seu banco de dados.
 
 ### Crie um arquivo chamado "firebase.js" nesta pasta
 

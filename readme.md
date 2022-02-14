@@ -1,3 +1,12 @@
+
+
+
+
+Pastes desatualizadas do Readme.md
+|
+v
+
+
 //Dependencies present in the project:
 
     npm install --save @react-native-firebase/app
